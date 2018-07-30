@@ -4,15 +4,23 @@
   "description": "",
   "main": ".eleventy.js",
   "scripts": {
-    "test": "mocha **/__tests__/*.test.js",
+    "test": "mocha -r ./test/globals.js **/__tests__/*.test.js",
+    "test:coverage": "nyc --reporter=html --temp-directory ./test/report/.tmp --report-dir ./test/report --all npm test",
     "prepublish": "npm test"
   },
-  "keywords": ["eleventy", "11ty", "cache", "performance", "resource"],
+  "keywords": [
+    "eleventy",
+    "11ty",
+    "cache",
+    "performance",
+    "resource"
+  ],
   "author": "mightyplow@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "md5": "^2.2.1",
     "mocha": "^5.2.0",
+    "nyc": "^12.0.2",
     "parse5": "^5.0.0"
   }
 }
