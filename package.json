@@ -4,10 +4,11 @@
   "description": "",
   "main": ".eleventy.js",
   "scripts": {
-    "test": "mocha **/__tests__/*.test.js"
+    "test": "mocha **/__tests__/*.test.js",
+    "prepublish": "npm test"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["eleventy", "11ty", "cache", "performance", "resource"],
+  "author": "mightyplow@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "md5": "^2.2.1",
