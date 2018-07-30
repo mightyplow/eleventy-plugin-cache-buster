@@ -1,0 +1,20 @@
+{
+  "name": "@mightyplow/eleventy-cache-buster",
+  "version": "0.1.0",
+  "description": "",
+  "main": ".eleventy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest-cli": "^23.4.2",
+    "md5": "^2.2.1",
+    "parse5": "^5.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
