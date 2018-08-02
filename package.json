@@ -1,7 +1,7 @@
 {
   "name": "@mightyplow/eleventy-plugin-cache-buster",
   "version": "0.1.0",
-  "description": "",
+  "description": "A plugin for @11ty/eleventy to add hashes to used resources.",
   "main": ".eleventy.js",
   "scripts": {
     "test": "mocha -r ./test/globals.js **/__tests__/*.test.js",
