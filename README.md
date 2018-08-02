@@ -8,7 +8,7 @@ By now the hash is created out of the resource content. See [notes](#notes).
 
 ## Installation
 ````
-npm i @mightyplow/eleventy-cache-buster -D
+npm i @mightyplow/eleventy-plugin-cache-buster -D
 ````
 
 ## Usage
@@ -16,7 +16,7 @@ npm i @mightyplow/eleventy-cache-buster -D
 In your projects' _.eleventy.js_ file, add the plugin.
 
 ````.js
-const cacheBuster = require('@mightyplow/eleventy-cache-buster');
+const cacheBuster = require('@mightyplow/eleventy-plugin-cache-buster');
 
 module.exports = function(eleventyConfig) {
     const cacheBusterOptions = {};
