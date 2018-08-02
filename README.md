@@ -1,4 +1,4 @@
-# eleventy-cache-buster
+# @mightyplow/eleventy-plugin-cache-buster
 
 A plugin for [eleventy](https://github.com/11ty/eleventy/) which adds a unique query parameter to css and js resources. 
 This allows to set unlimited caching for those resources and ensure that they get properly reloaded when they change.
