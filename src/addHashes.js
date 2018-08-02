@@ -39,7 +39,6 @@ module.exports = function (outputDir, options = defaultOptions) {
         if (!content.trim().length) {
             return content;
         }
-        // TODO: merge target with relative paths
 
         const document = parse5.parse(content, parserOptions);
 
