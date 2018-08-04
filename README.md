@@ -43,6 +43,27 @@ for script tags and link tags.
 
 Since the options get merged, the default attributes don't have to be included when you want to add additional ones.
 
+#### createResourceHash: function(outputDirectory, url, target) (default: [createResourceHash](./src/createResourceHash.js))
+
+The function which creates the hash for the found urls. You can use that if you want to add a custom value. 
+
+By default an MD5 hash is created out of the file content. Therefore the assets have to be built before running eleventy (see [notes](#notes)).
+If you want to build everything in parallel you can for instance add a timestamp. Notice that then the
+cache busting parameter changes on every build which leads to resources being cache busted with every release.
+
+```
+const cacheBuster = require('@mightyplow/eleventy-plugin-cache-buster');
+
+module.exports = function(eleventyConfig) {
+    const cacheBusterOptions = {
+        createResourceHash(outputDirectoy, url, target) {
+            return Date.now();
+        }
+    };
+    eleventyConfig.addPlugin(cacheBuster(cacheBusterOptions));
+};
+```
+
 ## Notes
 
 ### Valid resource URLs
