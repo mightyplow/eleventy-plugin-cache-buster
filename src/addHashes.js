@@ -17,13 +17,15 @@ const defaultOptions = {
     sourceAttributes: {
         link: 'href',
         script: 'src'
-    }
+    },
+    createResourceHash
 };
 
 module.exports = function (outputDir, options = defaultOptions) {
     const {
         hashParameter,
-        sourceAttributes
+        sourceAttributes,
+        createResourceHash
     } = merge(defaultOptions, options);
 
     const resourceTagNames = Object.keys(sourceAttributes);
