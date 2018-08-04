@@ -49,12 +49,12 @@ Since the options get merged, the default attributes don't have to be included w
 
 By now this plugin only works with path-relative URLs.
 - what will get processed:
-    - '/assets/css/foo.css'
-    - '../assets/css/foo.css'
+    - `/assets/css/foo.css`
+    - `../assets/css/foo.css`
 
 - what will not get processed:
-    - '//foo.bar/assets/css/foo.css'
-    - 'https&#58;//foo.bar/assets/css/foo.css'
+    - `//foo.bar/assets/css/foo.css`
+    - `https://foo.bar/assets/css/foo.css`
 
 ### Build order
 
