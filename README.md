@@ -25,6 +25,24 @@ module.exports = function(eleventyConfig) {
 
 ````
 
+### Options
+
+#### outputDirectory: string
+
+The directory where eleventy stores the built files to. This is required to resolve resources which start with a slash.
+If eleventy is called with the --output option from the command line, this option can be omitted.
+
+#### hashParameter: string (default: 'v')
+
+The query parameter which is appended to the resource urls, i.e. _/foo/bar.css?v=[hash]_.
+
+#### sourceAttributes: object (default: { link: 'href', script: 'src' })
+
+An object which maps the relevant html tags to the attributes, in which the url can be found in. By default it is looking
+for script tags and link tags.
+
+Since the options get merged, the default attributes don't have to be included when you want to add additional ones.
+
 ## Notes
 
 ### Valid resource URLs
