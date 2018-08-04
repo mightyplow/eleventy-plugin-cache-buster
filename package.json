@@ -16,6 +16,11 @@
     "resource"
   ],
   "author": "mightyplow@gmail.com",
+  "homepage": "https://github.com/mightyplow/eleventy-plugin-cache-buster",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mightyplow/eleventy-plugin-cache-buster.git"
+  },
   "license": "ISC",
   "dependencies": {
     "deepmerge": "^2.1.1",
