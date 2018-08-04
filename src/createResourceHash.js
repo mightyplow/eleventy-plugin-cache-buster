@@ -1,3 +1,4 @@
+const removeQuery = require('./removeQuery.js');
 const createResourceFilename = require('./createResourceFilename.js');
 const createFileChecksum = require('./createFileChecksum.js');
 
@@ -10,7 +11,7 @@ const createFileChecksum = require('./createFileChecksum.js');
  * @return {string}
  */
 module.exports = function createResourceHash (baseDir, url, target) {
-    const plainUrl = url.replace(/[?].*$/, '');
+    const plainUrl = removeQuery(url);
     const resourceFilename = createResourceFilename(baseDir, target, plainUrl);
     return createFileChecksum(resourceFilename);
 };

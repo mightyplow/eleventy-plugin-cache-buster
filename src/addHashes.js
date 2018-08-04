@@ -1,4 +1,3 @@
-const path = require('path');
 const parse5 = require('parse5');
 const merge = require('deepmerge');
 
@@ -7,9 +6,6 @@ const findNodes = require('./findNodes.js');
 const appendQueryParameter = require('./appendQueryParameter.js');
 const nodeHelper = require('./nodeHelper.js');
 const createResourceHash = require('./createResourceHash.js');
-const removeQuery = require('./removeQuery.js');
-const createResourceFilename = require('./createResourceFilename.js');
-const createFileChecksum = require('./createFileChecksum.js');
 
 const parserOptions = {
     // required to get the tags' start and end position
@@ -48,9 +44,7 @@ module.exports = function (outputDir, options = defaultOptions) {
 
         const replacements = resourceNodes.map(function (nodeHelper) {
             const source = nodeHelper.getSource();
-            const plainUrl = removeQuery(source);
-            const resourceFilename = createResourceFilename(outputDir, target, plainUrl);
-            const hash = createFileChecksum(resourceFilename);
+            const hash = createResourceHash(outputDir, source, target);
             nodeHelper.setSource(appendQueryParameter(source, hashParameter, hash));
 
             return {
