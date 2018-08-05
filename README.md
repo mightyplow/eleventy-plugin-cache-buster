@@ -4,7 +4,7 @@ A plugin for [eleventy](https://github.com/11ty/eleventy/) which adds a unique q
 This allows to set unlimited caching for those resources and ensure that they get properly reloaded when they change.
 See [this article on Cache Busting](https://www.keycdn.com/support/what-is-cache-busting/).
 
-By now the hash is created out of the resource content. See [notes](#notes).
+By default the hash is created out of the resource content (see [notes](#notes)).
 
 ## Installation
 ````
