@@ -1,6 +1,7 @@
 const removeQuery = require('./removeQuery.js');
 const createResourceFilename = require('./createResourceFilename.js');
-const createFileChecksum = require('./createFileChecksum.js');
+const memoize = require('./memoize.js');
+const createFileChecksum = memoize(require('./createFileChecksum.js'));
 
 /**
  * Creates the content hash for a passed url. It requires a basepath
